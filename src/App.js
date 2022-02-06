@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 const App = () => {
   return (
     <div>
-      <h1>React Poke</h1>
+      <h1 className="text-3xl font-bold underline">React Poke</h1>
     </div>
   );
 };
