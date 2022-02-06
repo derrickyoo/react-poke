@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/derrickyoo/react-poke/issues"
   },
-  "homepage": "https://github.com/derrickyoo/react-poke#readme"
+  "homepage": "https://github.com/derrickyoo/react-poke#readme",
+  "devDependencies": {
+    "prettier": "^2.5.1"
+  }
 }
