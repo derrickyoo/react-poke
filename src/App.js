@@ -1,25 +1,17 @@
-import React from "react";
+import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
-import styled from "styled-components/macro";
 import GlobalStyles from "./GlobalStyles";
+
+import Layout from "./Layout";
 
 const App = () => {
   return (
-    <Wrapper>
-      <Title>React Poke</Title>
-
+    <Fragment>
+      <Layout />
       <GlobalStyles />
-    </Wrapper>
+    </Fragment>
   );
 };
-
-const Wrapper = styled.div`
-  color: darkcyan;
-`;
-
-const Title = styled.h1`
-  text-align: center;
-`;
 
 const container = document.getElementById("root");
 const root = ReactDOM.createRoot(container);
