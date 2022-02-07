@@ -1,13 +1,12 @@
 import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
 import GlobalStyles from "./GlobalStyles";
-
-import Layout from "./Layout";
+import PokeLayout from "./PokeLayout";
 
 const App = () => {
   return (
     <Fragment>
-      <Layout />
+      <PokeLayout />
       <GlobalStyles />
     </Fragment>
   );
