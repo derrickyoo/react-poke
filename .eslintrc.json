@@ -21,8 +21,10 @@
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
-    },
-    "requireConfigFile": false
+    }
+  },
+  "babelOptions": {
+    "configFile": "./.babelrc"
   },
   "env": {
     "es6": true,
