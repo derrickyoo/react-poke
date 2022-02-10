@@ -1,12 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
 import styled from "styled-components/macro";
+import GlobalStyles from "./GlobalStyles";
 
 const App = () => {
   return (
     <Wrapper>
       <Title>React Poke</Title>
+
+      <GlobalStyles />
     </Wrapper>
   );
 };
@@ -16,7 +18,6 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 1.5em;
   text-align: center;
 `;
 
