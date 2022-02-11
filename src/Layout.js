@@ -1,7 +1,7 @@
 import styled from "styled-components/macro";
-import PokeCard from "./PokeCard";
+import PokeDeck from "./PokeDeck";
 
-export const pokeData = [
+const POKE_DATA = [
   {
     abilities: ["Overgrow"],
     weight: 15.2,
@@ -52,13 +52,11 @@ export const pokeData = [
   },
 ];
 
-const pokemon = pokeData[0];
-
-const PokeLayout = () => {
+const Layout = () => {
   return (
     <Wrapper>
-      <h1>Poke Layout!</h1>
-      <PokeCard pokemon={pokemon}></PokeCard>
+      {/* Section: PokeDeck */}
+      <PokeDeck pokemon={POKE_DATA}></PokeDeck>
     </Wrapper>
   );
 };
@@ -68,4 +66,4 @@ const Wrapper = styled.div`
   height: 100vh;
 `;
 
-export default PokeLayout;
+export default Layout;

@@ -1,14 +1,14 @@
 import styled from "styled-components/macro";
 import PokeType from "./PokeType";
 
-const PokeCard = ({ pokemon }) => {
+const PokeCard = ({ avatar, avatarAlt, number, name, types }) => {
   return (
     <Wrapper>
-      <Avatar src={pokemon.ThumbnailImage} alt={pokemon.ThumbnailAltText} />
-      <Number>{pokemon.number}</Number>
-      <Name>{pokemon.name}</Name>
+      <Avatar src={avatar} alt={avatarAlt} />
+      <Number>{number}</Number>
+      <Name>{name}</Name>
       <TypeList>
-        {pokemon.type.map((type, idx) => (
+        {types.map((type, idx) => (
           <PokeType key={`${idx}-${type}`} type={type} />
         ))}
       </TypeList>
@@ -34,7 +34,6 @@ const Avatar = styled.img`
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 16px;
-  margin-top: -64px;
 `;
 
 const Number = styled.p`

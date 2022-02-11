@@ -1,11 +1,11 @@
 import { createRoot } from "react-dom";
 import GlobalStyles from "./GlobalStyles";
-import PokeLayout from "./PokeLayout";
+import Layout from "./Layout";
 
 const App = () => {
   return (
     <>
-      <PokeLayout />
+      <Layout />
       <GlobalStyles />
     </>
   );
