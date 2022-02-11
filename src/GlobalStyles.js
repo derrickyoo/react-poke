@@ -1,8 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap'); 
-@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap'); 
   :root {
     /* Colors */
     --white: hsl(0, 100%, 100%);
@@ -42,8 +40,8 @@ const GlobalStyles = createGlobalStyle`
  */
 
     /* Type */
-    --heading-font: "Fredoka One", monospace;
-    --body-font: "Merriweather Sans", sans-serif, serif;
+    --heading-font: "",
+    --body-font: "",
   }
 
   *, *::before, *::after {
