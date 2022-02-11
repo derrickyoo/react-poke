@@ -4,6 +4,7 @@ const GlobalStyles = createGlobalStyle`
   :root {
     /* Colors */
     --white: hsl(0, 100%, 100%);
+    --blue: hsl(240, 100%, 50%);
     --black: hsl(0, 0%, 0%);
 
     /* Intentions */

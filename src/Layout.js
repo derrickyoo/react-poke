@@ -1,4 +1,5 @@
 import styled from "styled-components/macro";
+import PokeSearch from "./PokeSearch";
 import PokeDeck from "./PokeDeck";
 
 const POKE_DATA = [
@@ -55,6 +56,9 @@ const POKE_DATA = [
 const Layout = () => {
   return (
     <Wrapper>
+      {/* Section: PokeSearch */}
+      <PokeSearch />
+
       {/* Section: PokeDeck */}
       <PokeDeck pokemon={POKE_DATA}></PokeDeck>
     </Wrapper>

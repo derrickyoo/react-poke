@@ -4,9 +4,9 @@ import PokeCard from "./PokeCard";
 const PokeDeck = ({ pokemon }) => {
   return (
     <Section>
-      <h2>{`Gotta Catch 'Em All`}</h2>
+      <Heading>{`Gotta Catch 'Em All`}</Heading>
       <Description>{`You teach me and I'll teach you Pokémon!`}</Description>
-      <Box>
+      <Cards>
         {pokemon.map((pokemon) => (
           <PokeCard
             name={pokemon.name}
@@ -17,21 +17,25 @@ const PokeDeck = ({ pokemon }) => {
             key={pokemon.number}
           />
         ))}
-      </Box>
+      </Cards>
     </Section>
   );
 };
 
 const Section = styled.section`
   padding: 24px;
+`;
+
+const Heading = styled.h2`
   text-align: center;
 `;
 
 const Description = styled.p`
   margin-bottom: 24px;
+  text-align: center;
 `;
 
-const Box = styled.div`
+const Cards = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
