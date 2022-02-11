@@ -1,3 +1,6 @@
+import styled from "styled-components/macro";
+import PokeCard from "./PokeCard";
+
 export const pokeData = [
   {
     abilities: ["Overgrow"],
@@ -53,21 +56,16 @@ const pokemon = pokeData[0];
 
 const PokeLayout = () => {
   return (
-    <div>
+    <Wrapper>
       <h1>Poke Layout!</h1>
-      {/* Filter Field */}
-
-      {/* Pokemon Card  */}
-      <div>
-        <img src={pokemon.ThumbnailImage} alt={pokemon.ThumbnailAltText} />
-        <p>{`#${pokemon.id}`}</p>
-        <h3>{pokemon.name}</h3>
-        <p>{pokemon.type.join(" ")}</p>
-      </div>
-
-      {/* Pokemon Cards */}
-    </div>
+      <PokeCard pokemon={pokemon}></PokeCard>
+    </Wrapper>
   );
 };
+
+const Wrapper = styled.div`
+  width: 100vw;
+  height: 100vh;
+`;
 
 export default PokeLayout;
