@@ -1,10 +1,12 @@
+import { useState } from "react";
 import styled from "styled-components/macro";
 
 const searchDesciption =
   "Search for a Pokémon by name or using its National Pokédex number.";
 
 const PokeSearch = () => {
-  const pokemon = "bulbasaur";
+  const [pokemon, setPokemon] = useState("");
+
   return (
     <Wrapper>
       <Heading>Search</Heading>
@@ -17,6 +19,8 @@ const PokeSearch = () => {
             type="text"
             value={pokemon}
             placeholder="Search by name or number"
+            onChange={(e) => setPokemon(e.target.value)}
+            onBlur={(e) => setPokemon(e.target.value)}
           />
         </Label>
         <SubmitButton type="submit">Submit</SubmitButton>
