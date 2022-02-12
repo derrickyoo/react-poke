@@ -1,16 +1,10 @@
-import { useEffect, useState } from "react";
 import styled from "styled-components/macro";
 import Search from "./Search";
 import Deck from "./Deck";
-import data from "./data.json";
+import usePokemonList from "./usePokemonList";
 
 const Pokedex = () => {
-  const [pokemon, setPokemon] = useState([]);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setPokemon(data), 1000);
-    return () => clearTimeout(timer);
-  }, []);
+  const [pokemon] = usePokemonList();
 
   return (
     <Wrapper>
