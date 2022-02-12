@@ -13,6 +13,7 @@ const PokeDeck = ({ pokemon }) => {
           <Cards>
             {pokemon.map((pokemon) => (
               <Card
+                id={pokemon.id}
                 name={pokemon.name}
                 number={pokemon.number}
                 avatar={pokemon.ThumbnailImage}

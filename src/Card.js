@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import styled from "styled-components/macro";
 import Type from "./Type";
 
-const Card = ({ avatar, avatarAlt, number, name, types }) => {
+const Card = ({ id, avatar, avatarAlt, number, name, types }) => {
   return (
-    <RouterLink to={`/details/${+number}`}>
+    <RouterLink to={`/details/${id}`}>
       <Wrapper>
         <Avatar src={avatar} alt={avatarAlt} />
         <Number>{number}</Number>
