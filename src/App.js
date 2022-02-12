@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom";
 import styled from "styled-components/macro";
@@ -10,7 +10,7 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-        <Brand>React Pokédex</Brand>
+        <StyledLink to="/">React Pokédex</StyledLink>
         <Routes>
           <Route path="details/:id" element={<Details />} />
           <Route path="/" element={<Pokedex />} />
@@ -21,8 +21,20 @@ const App = () => {
   );
 };
 
-const Brand = styled.h1`
+const StyledLink = styled(Link)`
+  display: block;
+  color: var(--black);
   text-align: center;
+  text-decoration: none;
+  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  &:hover,
+  &:focus {
+    color: currentColor;
+    text-decoration: none;
+  }
 `;
 
 const container = document.getElementById("root");

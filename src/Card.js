@@ -1,20 +1,35 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components/macro";
 import Type from "./Type";
 
 const Card = ({ avatar, avatarAlt, number, name, types }) => {
   return (
-    <Wrapper>
-      <Avatar src={avatar} alt={avatarAlt} />
-      <Number>{number}</Number>
-      <Name>{name}</Name>
-      <TypeList>
-        {types.map((type, idx) => (
-          <Type key={`${idx}-${type}`} type={type} />
-        ))}
-      </TypeList>
-    </Wrapper>
+    <StyledLink to={`/details/${+number}`}>
+      <Wrapper>
+        <Avatar src={avatar} alt={avatarAlt} />
+        <Number>{number}</Number>
+        <Name>{name}</Name>
+        <TypeList>
+          {types.map((type, idx) => (
+            <Type key={`${idx}-${type}`} type={type} />
+          ))}
+        </TypeList>
+      </Wrapper>
+    </StyledLink>
   );
 };
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: var(--black);
+
+  &:focus {
+    outline: 3px auto var(--blue);
+    outline-offset: 8px;
+    border-radius: 24px;
+    border-color: transparent;
+  }
+`;
 
 const Wrapper = styled.article`
   min-width: 250px;
@@ -26,6 +41,11 @@ const Wrapper = styled.article`
   transition: transform 250ms, box-shadow 400ms;
 
   &:hover {
+    transform: scale(1);
+    box-shadow: var(--shadow-elevation-high);
+  }
+
+  ${StyledLink}:focus & {
     transform: scale(1);
     box-shadow: var(--shadow-elevation-high);
   }
@@ -44,6 +64,7 @@ const Avatar = styled.img`
 
 const Number = styled.p`
   margin-bottom: 8px;
+
   &::before {
     content: "#";
   }
