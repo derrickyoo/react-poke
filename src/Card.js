@@ -23,6 +23,12 @@ const Wrapper = styled.article`
   background: var(--white);
   box-shadow: var(--shadow-elevation-medium);
   text-align: center;
+  transition: transform 250ms, box-shadow 400ms;
+
+  &:hover {
+    transform: scale(1);
+    box-shadow: var(--shadow-elevation-high);
+  }
 `;
 
 const Avatar = styled.img`
