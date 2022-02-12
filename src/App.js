@@ -10,7 +10,7 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-        <StyledLink to="/">React Pokédex</StyledLink>
+        <RouterLink to="/">React Pokédex</RouterLink>
         <Routes>
           <Route path="details/:id" element={<Details />} />
           <Route path="/" element={<Pokedex />} />
@@ -21,7 +21,7 @@ const App = () => {
   );
 };
 
-const StyledLink = styled(Link)`
+const RouterLink = styled(Link)`
   display: block;
   color: var(--black);
   text-align: center;

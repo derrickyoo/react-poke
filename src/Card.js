@@ -4,22 +4,22 @@ import Type from "./Type";
 
 const Card = ({ avatar, avatarAlt, number, name, types }) => {
   return (
-    <StyledLink to={`/details/${+number}`}>
+    <RouterLink to={`/details/${+number}`}>
       <Wrapper>
         <Avatar src={avatar} alt={avatarAlt} />
         <Number>{number}</Number>
         <Name>{name}</Name>
-        <TypeList>
+        <Types>
           {types.map((type, idx) => (
             <Type key={`${idx}-${type}`} type={type} />
           ))}
-        </TypeList>
+        </Types>
       </Wrapper>
-    </StyledLink>
+    </RouterLink>
   );
 };
 
-const StyledLink = styled(Link)`
+const RouterLink = styled(Link)`
   text-decoration: none;
   color: var(--black);
 
@@ -45,7 +45,7 @@ const Wrapper = styled.article`
     box-shadow: var(--shadow-elevation-high);
   }
 
-  ${StyledLink}:focus & {
+  ${RouterLink}:focus & {
     transform: scale(1);
     box-shadow: var(--shadow-elevation-high);
   }
@@ -74,7 +74,7 @@ const Name = styled.h2`
   margin-bottom: 8px;
 `;
 
-const TypeList = styled.ul`
+const Types = styled.ul`
   margin: 0;
   padding: 0;
   display: flex;
