@@ -3,26 +3,32 @@ import PokeCard from "./PokeCard";
 
 const PokeDeck = ({ pokemon }) => {
   return (
-    <Section>
-      <Heading>{`Gotta Catch 'Em All`}</Heading>
-      <Description>{`You teach me and I'll teach you Pokémon!`}</Description>
-      <Cards>
-        {pokemon.map((pokemon) => (
-          <PokeCard
-            name={pokemon.name}
-            number={pokemon.number}
-            avatar={pokemon.ThumbnailImage}
-            avatarAlt={pokemon.ThumbnailAltText}
-            types={pokemon.type}
-            key={pokemon.number}
-          />
-        ))}
-      </Cards>
-    </Section>
+    <Wrapper>
+      {!pokemon.length ? (
+        <Heading>No Pokémon Found</Heading>
+      ) : (
+        <>
+          <Heading>{`Gotta Catch 'Em All`}</Heading>
+          <Description>{`You teach me and I'll teach you Pokémon!`}</Description>
+          <Cards>
+            {pokemon.map((pokemon) => (
+              <PokeCard
+                name={pokemon.name}
+                number={pokemon.number}
+                avatar={pokemon.ThumbnailImage}
+                avatarAlt={pokemon.ThumbnailAltText}
+                types={pokemon.type}
+                key={pokemon.number}
+              />
+            ))}
+          </Cards>
+        </>
+      )}
+    </Wrapper>
   );
 };
 
-const Section = styled.section`
+const Wrapper = styled.section`
   padding: 24px;
 `;
 
