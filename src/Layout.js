@@ -17,8 +17,11 @@ const Layout = () => {
       {/* Section: PokeSearch */}
       <PokeSearch />
 
-      {/* Section: PokeDeck */}
-      <PokeDeck pokemon={pokemon}></PokeDeck>
+      {!pokemon.length ? (
+        <LoadingText>No Pokémon Found</LoadingText>
+      ) : (
+        <PokeDeck pokemon={pokemon}></PokeDeck>
+      )}
     </Wrapper>
   );
 };
@@ -26,6 +29,10 @@ const Layout = () => {
 const Wrapper = styled.div`
   width: 100vw;
   height: 100vh;
+`;
+
+const LoadingText = styled.h2`
+  text-align: center;
 `;
 
 export default Layout;

@@ -13,7 +13,11 @@ const PokeSearch = () => {
 
       <Text>{searchDesciption}</Text>
 
-      <SearchForm>
+      <SearchForm
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
+      >
         <Label htmlFor="Pokémon">
           <TextInput
             type="text"
