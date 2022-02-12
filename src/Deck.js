@@ -5,7 +5,7 @@ const PokeDeck = ({ pokemon }) => {
   return (
     <Wrapper>
       {!pokemon.length ? (
-        <Heading>No Pokémon Found</Heading>
+        <Heading>Scouting for Pokémon</Heading>
       ) : (
         <>
           <Heading>{`Gotta Catch 'Em All`}</Heading>
