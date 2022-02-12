@@ -1,3 +1,4 @@
+import { StrictMode } from "react";
 import { createRoot } from "react-dom";
 import GlobalStyles from "./GlobalStyles";
 import Layout from "./Layout";
@@ -13,4 +14,8 @@ const App = () => {
 
 const container = document.getElementById("root");
 const root = createRoot(container);
-root.render(<App />);
+root.render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+);
