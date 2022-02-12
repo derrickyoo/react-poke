@@ -1,12 +1,19 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom";
 import GlobalStyles from "./GlobalStyles";
-import Layout from "./Layout";
+import Pokedex from "./Pokedex";
+import Details from "./Details";
 
 const App = () => {
   return (
     <>
-      <Layout />
+      <BrowserRouter>
+        <Routes>
+          <Route path="details/:id" element={<Details />} />
+          <Route path="/" element={<Pokedex />} />
+        </Routes>
+      </BrowserRouter>
       <GlobalStyles />
     </>
   );

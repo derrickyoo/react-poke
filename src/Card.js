@@ -1,7 +1,7 @@
 import styled from "styled-components/macro";
-import PokeType from "./PokeType";
+import Type from "./Type";
 
-const PokeCard = ({ avatar, avatarAlt, number, name, types }) => {
+const Card = ({ avatar, avatarAlt, number, name, types }) => {
   return (
     <Wrapper>
       <Avatar src={avatar} alt={avatarAlt} />
@@ -9,7 +9,7 @@ const PokeCard = ({ avatar, avatarAlt, number, name, types }) => {
       <Name>{name}</Name>
       <TypeList>
         {types.map((type, idx) => (
-          <PokeType key={`${idx}-${type}`} type={type} />
+          <Type key={`${idx}-${type}`} type={type} />
         ))}
       </TypeList>
     </Wrapper>
@@ -56,4 +56,4 @@ const TypeList = styled.ul`
   justify-content: center;
 `;
 
-export default PokeCard;
+export default Card;

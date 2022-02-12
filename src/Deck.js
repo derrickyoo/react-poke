@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import PokeCard from "./PokeCard";
+import Card from "./Card";
 
 const PokeDeck = ({ pokemon }) => {
   return (
@@ -12,7 +12,7 @@ const PokeDeck = ({ pokemon }) => {
           <Description>{`You teach me and I'll teach you Pokémon!`}</Description>
           <Cards>
             {pokemon.map((pokemon) => (
-              <PokeCard
+              <Card
                 name={pokemon.name}
                 number={pokemon.number}
                 avatar={pokemon.ThumbnailImage}

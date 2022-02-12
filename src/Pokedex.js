@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components/macro";
-import PokeSearch from "./PokeSearch";
-import PokeDeck from "./PokeDeck";
+import Search from "./Search";
+import Deck from "./Deck";
 import data from "./data.json";
 
-const Layout = () => {
+const Pokedex = () => {
   const [pokemon, setPokemon] = useState([]);
 
   useEffect(() => {
@@ -14,11 +14,11 @@ const Layout = () => {
 
   return (
     <Wrapper>
-      {/* Section: PokeSearch */}
-      <PokeSearch />
+      {/* Section: Search */}
+      <Search />
 
-      {/* Section: PokeDeck */}
-      <PokeDeck pokemon={pokemon}></PokeDeck>
+      {/* Section: Deck */}
+      <Deck pokemon={pokemon}></Deck>
     </Wrapper>
   );
 };
@@ -28,4 +28,4 @@ const Wrapper = styled.div`
   height: 100vh;
 `;
 
-export default Layout;
+export default Pokedex;
