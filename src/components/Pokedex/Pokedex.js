@@ -1,7 +1,7 @@
 import styled from "styled-components/macro";
-import Search from "./Search";
-import Deck from "./Deck";
-import usePokemonList from "./usePokemonList";
+import Search from "../../Search";
+import Deck from "../../Deck";
+import usePokemonList from "../../usePokemonList";
 
 const Pokedex = () => {
   const [pokemon] = usePokemonList();

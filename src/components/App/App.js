@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import styled from "styled-components/macro";
-import Pokedex from "../../Pokedex";
+import Pokedex from "../Pokedex";
 import Details from "../../Details";
 
 const App = () => {
