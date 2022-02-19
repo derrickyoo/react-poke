@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import pokemonData from "./data.json";
+import pokemonData from "../data.json";
 
 let localCache = [];
 
-export default function usePokemonList() {
+export function usePokemonList() {
   const [pokemonList, setPokemonList] = useState([]);
   const [status, setStatus] = useState("no pokémon found");
 

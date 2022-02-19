@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { useParams } from "react-router-dom";
-import getPokemon from "../../getPokemon";
+import { getPokemon } from "../../api/pokeapi";
 
 function DetailsParent() {
   const { id } = useParams();
