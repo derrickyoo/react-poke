@@ -1,7 +1,7 @@
 import styled from "styled-components/macro";
-import Card from "./Card";
+import Card from "../../Card";
 
-const PokeDeck = ({ pokemon }) => {
+const Deck = ({ pokemon }) => {
   return (
     <Wrapper>
       {!pokemon.length ? (
@@ -49,4 +49,4 @@ const Cards = styled.div`
   gap: 32px;
 `;
 
-export default PokeDeck;
+export default Deck;
