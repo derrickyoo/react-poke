@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components/macro";
-import Type from "../../Type";
+import Type from "../Type";
 
 const Card = ({ id, avatar, avatarAlt, number, name, types }) => {
   return (
@@ -9,11 +9,11 @@ const Card = ({ id, avatar, avatarAlt, number, name, types }) => {
         <Avatar src={avatar} alt={avatarAlt} />
         <Number>{number}</Number>
         <Name>{name}</Name>
-        <Types>
+        <TypesWrapper>
           {types.map((type, idx) => (
             <Type key={`${idx}-${type}`} type={type} />
           ))}
-        </Types>
+        </TypesWrapper>
       </Wrapper>
     </RouterLink>
   );
@@ -74,7 +74,7 @@ const Name = styled.h2`
   margin-bottom: 8px;
 `;
 
-const Types = styled.ul`
+const TypesWrapper = styled.ul`
   margin: 0;
   padding: 0;
   display: flex;

@@ -1,6 +1,6 @@
 import styled from "styled-components/macro";
 
-const PokeType = ({ type }) => {
+const Type = ({ type }) => {
   return <ListItem>{type}</ListItem>;
 };
 
@@ -12,4 +12,4 @@ const ListItem = styled.li`
   border-radius: 8px;
 `;
 
-export default PokeType;
+export default Type;
