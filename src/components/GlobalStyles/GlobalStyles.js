@@ -47,19 +47,19 @@ const GlobalStyles = createGlobalStyle`
 
   *, *::before, *::after {
     box-sizing: border-box;
+    line-height: 1.5px;
+    -webkit-font-smoothing: antialiased;
   }
 
   * {
     margin: 0;
   }
 
-  html, body {
+  html, body, #root {
     height: 100%;
   }
 
   body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
     font-family: var(--body-font);
   }
 
