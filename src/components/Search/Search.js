@@ -4,7 +4,7 @@ import styled from "styled-components/macro";
 const searchDesciption =
   "Search for a Pokémon by name or using its National Pokédex number.";
 
-const PokeSearch = () => {
+const Search = () => {
   const [pokemon, setPokemon] = useState("");
 
   return (
@@ -81,4 +81,4 @@ const SubmitButton = styled.button`
   }
 `;
 
-export default PokeSearch;
+export default Search;
