@@ -10,7 +10,12 @@
   ],
   "plugins": [
     "macros",
-    "babel-plugin-styled-components",
+    [
+      "babel-plugin-styled-components",
+      {
+        "displayName": true
+      }
+    ],
     "@babel/plugin-proposal-class-properties"
   ]
 }
