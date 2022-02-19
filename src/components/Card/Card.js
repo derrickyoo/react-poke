@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components/macro";
-import Type from "./Type";
+import Type from "../../Type";
 
 const Card = ({ id, avatar, avatarAlt, number, name, types }) => {
   return (
