@@ -1,4 +1,3 @@
-import styled from "styled-components/macro";
 import Search from "../Search";
 import Deck from "../Deck";
 import { usePokemonList } from "../../lib/hooks";
