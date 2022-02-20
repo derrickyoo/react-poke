@@ -1,13 +1,13 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import styled from "styled-components/macro";
-import Pokedex from "../Pokedex";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "../Header";
 import Details from "../Details";
+import Pokedex from "../Pokedex";
 
 const App = () => {
   return (
     <>
       <BrowserRouter>
-        <RouterLink to="/">React Pokédex</RouterLink>
+        <Header />
         <Routes>
           <Route path="details/:id" element={<Details />} />
           <Route path="/" element={<Pokedex />} />
@@ -16,21 +16,5 @@ const App = () => {
     </>
   );
 };
-
-const RouterLink = styled(Link)`
-  display: block;
-  color: var(--black);
-  text-align: center;
-  text-decoration: none;
-  font-family: var(--heading-font);
-  font-size: 1.5rem;
-  font-weight: 600;
-
-  &:hover,
-  &:focus {
-    color: currentColor;
-    text-decoration: none;
-  }
-`;
 
 export default App;
