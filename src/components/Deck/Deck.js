@@ -8,8 +8,6 @@ const Deck = ({ pokemon }) => {
         <Heading>Scouting for Pokémon</Heading>
       ) : (
         <>
-          <Heading>{`Gotta Catch 'Em All`}</Heading>
-          <Description>{`You teach me and I'll teach you Pokémon!`}</Description>
           <Cards>
             {pokemon.map((pokemon) => (
               <Card
@@ -34,11 +32,6 @@ const Wrapper = styled.section`
 `;
 
 const Heading = styled.h2`
-  text-align: center;
-`;
-
-const Description = styled.p`
-  margin-bottom: 24px;
   text-align: center;
 `;
 

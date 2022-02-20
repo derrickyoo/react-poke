@@ -6,13 +6,13 @@ const Pokedex = () => {
   const [pokemon] = usePokemonList();
 
   return (
-    <>
+    <main>
       {/* Section: Search */}
       <Search />
 
       {/* Section: Deck */}
       <Deck pokemon={pokemon}></Deck>
-    </>
+    </main>
   );
 };
 
