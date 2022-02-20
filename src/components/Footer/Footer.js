@@ -3,8 +3,8 @@ import styled from "styled-components/macro";
 const Footer = () => {
   return (
     <Wrapper>
-      <FooterHeader>Gotta Catch 'Em All</FooterHeader>
-      <FooterText>You teach me and I'll teach you Pokémon!</FooterText>
+      <FooterHeader>Gotta Catch &apos;Em All</FooterHeader>
+      <FooterText>You teach me and I&apos;ll teach you Pokémon!</FooterText>
       <FooterText>Made with ☕ and 🖤</FooterText>
     </Wrapper>
   );
